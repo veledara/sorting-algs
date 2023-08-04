@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 // сортировка выбором
 void selectionSort(int *array, int size)
@@ -124,8 +126,12 @@ int getMax(const int array[], int n)
     return max;
 }
 
-// сортировка подсчетом
-void countSort(int array[], int n, int exp)
+void countSort(int *array, int size)
+{
+    return;
+}
+
+void countSortForRadix(int array[], int n, int exp)
 {
     int output[n];
     int i, count[10] = {0};
@@ -148,7 +154,7 @@ void radixSort(int array[], int n)
     int m = getMax(array, n);
     for (int exp = 1; m / exp > 0; exp *= 10)
     {
-        countSort(array, n, exp);
+        countSortForRadix(array, n, exp);
     }
 }
 
@@ -239,7 +245,7 @@ void quickSortHoare(int *array, int low, int high)
     if (low < high)
     {
         int pivot = partitionHoare(array, low, high);
-        quickSortHoare(array, low, pivot - 1);
+        quickSortHoare(array, low, pivot);
         quickSortHoare(array, pivot + 1, high);
     }
 }

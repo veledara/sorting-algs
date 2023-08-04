@@ -6,7 +6,7 @@ void bubbleSort(int *array, int size);
 void bubbleSortWithIverson(int *array, int size);
 void insertionSort(int *array, int size);
 void binaryInsertionSort(int *array, int size);
-void countSort(int array[], int n, int exp);
+void countSort(int *array, int size);
 void radixSort(int array[], int size);
 void mergeSort(int array[], int left, int righ);
 void quickSortHoare(int *array, int left, int right);
